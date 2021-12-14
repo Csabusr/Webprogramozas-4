@@ -1,0 +1,27 @@
+Table address {
+  id int [pk, increment] // auto-increment
+  zip_code varchar
+  city varchar
+  street_name varchar
+  street_number varchar
+}
+
+Table neptun {
+  id int [pk, increment] // auto-increment
+  neptun_code varchar
+}
+
+Table student {
+  id int [pk, increment]
+  name varchar
+  tin char
+  ssn char
+  email varchar
+  phone varchar
+  neptun_id int
+  address_id int
+ }
+
+Ref: address.id > student.address_id  
+Ref: neptun.id > student.neptun_id
+
